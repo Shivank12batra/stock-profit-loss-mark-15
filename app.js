@@ -24,9 +24,9 @@ function clickHandler() {
         var diff = totalclosePrice - totalInputPrice;
     }
 
-    let percentageChange = Math.round((diff/inputPrice) *100);
+    let percentageChange = Math.round((diff/totalInputPrice) *100);
 
-    output.innerText = `Hey, the ${placeholder} is ${diff} and the percent is ${percentageChange}%`
+    output.innerText = `Hey, the ${placeholder} is ${diff} and the ${placeholder} percent is ${percentageChange}%`
 
 }
 
