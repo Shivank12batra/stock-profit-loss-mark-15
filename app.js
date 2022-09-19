@@ -14,14 +14,18 @@ function clickHandler() {
 
     // main logic
     let totalInputPrice = inputPrice * quantity;
-    let totalclosePrice = closePrice * quantity;
-    if (totalInputPrice > totalclosePrice) {
+    let totalClosePrice = closePrice * quantity;
+    if (totalInputPrice > totalClosePrice) {
         var placeholder = 'loss';
         var diff = totalInputPrice - totalclosePrice;
     }
+    else if (totalInputPrice === totalClosePrice) {
+        output.innerText = 'No profit, no loss!';
+        return;
+    }
     else {
         var placeholder = 'profit';
-        var diff = totalclosePrice - totalInputPrice;
+        var diff = totalClosePrice - totalInputPrice;
     }
 
     let percentageChange = Math.round((diff/totalInputPrice) *100);
