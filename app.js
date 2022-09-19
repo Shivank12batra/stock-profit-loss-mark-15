@@ -17,7 +17,7 @@ function clickHandler() {
     let totalClosePrice = closePrice * quantity;
     if (totalInputPrice > totalClosePrice) {
         var placeholder = 'loss';
-        var diff = totalInputPrice - totalclosePrice;
+        var diff = totalInputPrice - totalClosePrice;
     }
     else if (totalInputPrice === totalClosePrice) {
         output.innerText = 'No profit, no loss!';
